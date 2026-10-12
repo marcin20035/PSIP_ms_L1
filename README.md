@@ -1,1 +1,14 @@
 # PSIP_ms_L1
+- Marcin - minski
+- Jakub - chełmski
+- Stanisław - turecki
+- Jan - warszawski
+- Bartek - radomszczański
+- Jan - miński
+- Dominik - koniński
+- Kacper - legnicki
+- Tymoteusz - toruński
+- Dawid - bocheński
+- Daniel - sochaczewksi
+- Julia - hajnowski
+- Michał - biłgorajski
