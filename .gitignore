@@ -5,3 +5,4 @@
 !.env.example
 __pycache__/
 *.pyc
+data/bdot10k/
