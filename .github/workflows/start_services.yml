@@ -10,28 +10,87 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: psip-remote-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   start-db:
     runs-on: self-hosted
-
     environment:
       name: ${{ github.ref_name }}
+
+    env:
+      POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+      POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+      POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+      ENVIRONMENT: ${{ github.ref_name }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Start PostGIS
-        env:
-          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-          POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
-          ENVIRONMENT: ${{ github.ref_name }}
+      - name: Check database settings
+        shell: bash
         run: |
-          docker compose -f docker-compose-remote.yml -p "remote-db-$GITHUB_REF_NAME" up -d --build
+          set -euo pipefail
+          for key in POSTGRES_USER POSTGRES_PASSWORD POSTGRES_DB POSTGRES_PORT ENVIRONMENT; do
+            if [[ -z "${!key:-}" ]]; then
+              echo "Missing environment variable: $key" >&2
+              exit 1
+            fi
+          done
+
+      - name: Start PostGIS and wait for readiness
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker compose -f docker-compose-remote.yml -p "remote-db-${GITHUB_REF_NAME}" up -d --build --wait postgis
+
+      - name: Load H3 only if all three grids are missing
+        shell: bash
+        run: |
+          set -euo pipefail
+          project="remote-db-${GITHUB_REF_NAME}"
+          container="$(docker compose -f docker-compose-remote.yml -p "$project" ps -q postgis)"
+          if [[ -z "$container" ]]; then
+            echo 'PostGIS container was not found' >&2
+            exit 1
+          fi
+
+          existing="$(docker exec "$container" psql -XAt -v ON_ERROR_STOP=1 \
+            -U "$POSTGRES_USER" -d "$POSTGRES_DB" \
+            -c "SELECT count(*) FROM pg_tables WHERE schemaname = 'grid' AND tablename IN ('h3_r7', 'h3_r8', 'h3_r9');")"
+
+          if [[ "$existing" == "0" ]]; then
+            echo 'H3 grids missing; running the load.py script'
+            docker compose -f docker-compose-remote.yml -p "$project" --profile loader \
+              run --rm --build python python3 /app/python/load.py
+          elif [[ "$existing" == "3" ]]; then
+            echo 'All three H3 tables already exist; keeping existing data untouched'
+          else
+            echo "Only $existing of 3 H3 tables exist. Refusing to overwrite an incomplete database." >&2
+            exit 1
+          fi
+
+      - name: Verify H3 tables and record counts
+        shell: bash
+        run: |
+          set -euo pipefail
+          project="remote-db-${GITHUB_REF_NAME}"
+          container="$(docker compose -f docker-compose-remote.yml -p "$project" ps -q postgis)"
+          actual="$(docker exec "$container" psql -XAt -v ON_ERROR_STOP=1 \
+            -U "$POSTGRES_USER" -d "$POSTGRES_DB" \
+            -c "SELECT (SELECT count(*) FROM grid.h3_r7), (SELECT count(*) FROM grid.h3_r8), (SELECT count(*) FROM grid.h3_r9);")"
+          echo "H3 row counts r7|r8|r9: $actual"
+          if [[ "$actual" != "302|1885|12460" ]]; then
+            echo 'Unexpected row counts. Review data before changing existing tables.' >&2
+            exit 1
+          fi
 
       - name: Show running containers
+        shell: bash
         run: |
           docker ps
           docker volume ls | grep remote-db || true

@@ -1,0 +1,9 @@
+.git/
+.idea/
+.runner
+.env
+.env.*
+__pycache__/
+*.pyc
+*.qmd
+data/bdot10k/

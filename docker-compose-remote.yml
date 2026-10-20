@@ -3,19 +3,35 @@ services:
     build:
       context: .
       dockerfile: docker/postgis/Dockerfile
-
     environment:
       POSTGRES_USER: ${POSTGRES_USER:?Brak POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Brak POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB:?Brak POSTGRES_DB}
-
     ports:
       - "${POSTGRES_PORT:?Brak POSTGRES_PORT}:5432"
-
     volumes:
       - pgdata:/var/lib/postgresql/data
-
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 5s
+      retries: 24
     restart: unless-stopped
+
+  python:
+    profiles: ["loader"]
+    build:
+      context: .
+      dockerfile: docker/python/Dockerfile.remote
+    environment:
+      PGHOST: postgis
+      PGPORT: "5432"
+      PGDATABASE: ${POSTGRES_DB:?Brak POSTGRES_DB}
+      PGUSER: ${POSTGRES_USER:?Brak POSTGRES_USER}
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Brak POSTGRES_PASSWORD}
+    depends_on:
+      postgis:
+        condition: service_healthy
 
 volumes:
   pgdata:
