@@ -1,0 +1,65 @@
+﻿layer;metric_column;name_pl;geom_kind;ivrf;priority;source;reason
+ot_adja_a;area_ot_adja_a_m2;Jednostki podziału administracyjnego;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Warstwa administracyjna: brak fizycznego wpływu.
+ot_adms_a;area_ot_adms_a_m2;Miejscowości;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Miejscowość jako jednostka przestrzenna; nie liczyć drugi raz zabudowy."
+ot_adms_p;count_ot_adms_p;Miejscowości;point;0.0;0.0;Neutralne_dla_modelu_v1;Punkt opisowy miejscowości.
+ot_biub_l;length_ot_biub_l_m;Inne budowle (kod do sprawdzenia);line;0.0;0.0;Neutralne_dla_modelu_v1;"Niejednoznaczny kod warstwy; nie przypisywać bariery bez sprawdzenia typu."
+ot_bubd_a;area_ot_bubd_a_m2;Budynki;polygon;-0.85;1.3;Propozycja_ekspercka;Zajęcie powierzchni przez zabudowę utrudnia ruch poza drogami.
+ot_buhd_l;length_ot_buhd_l_m;Budowle hydrotechniczne;line;0.0;0.0;Neutralne_dla_modelu_v1;Klasa miesza konstrukcje wspierające i blokujące ruch.
+ot_buib_a;area_ot_buib_a_m2;Inne budowle;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Różne budowle; brak jednorodnej przejezdności."
+ot_buin_l;length_ot_buin_l_m;Budowle inżynierskie;line;0.0;0.0;Neutralne_dla_modelu_v1;Mosty i inne budowle mogą ułatwiać lub utrudniać ruch.
+ot_buit_a;area_ot_buit_a_m2;Inne urządzenia techniczne;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Heterogeniczne obiekty urządzeń technicznych.
+ot_buit_p;count_ot_buit_p;Inne urządzenia techniczne;point;0.0;0.0;Neutralne_dla_modelu_v1;Punktowe urządzenia bez informacji o zajmowanej powierzchni.
+ot_busp_a;area_ot_busp_a_m2;Obiekty sportowe;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Obiekty sportowe mają różne nawierzchnie.
+ot_busp_l;length_ot_busp_l_m;Obiekty sportowe;line;0.0;0.0;Neutralne_dla_modelu_v1;Obiekty sportowe, niejednoznaczna bariera.
+ot_butr_l;length_ot_butr_l_m;Urządzenia transportowe;line;0.0;0.0;Neutralne_dla_modelu_v1;Urządzenia transportowe, różny wpływ.
+ot_buuo_l;length_ot_buuo_l_m;Umocnienia drogowe i wodne;line;-0.4;0.5;Propozycja_ekspercka;"Umocnienia terenowe mogą stanowić przeszkody; wpływ zależy od typu."
+ot_buwt_p;count_ot_buwt_p;Wysokie budowle techniczne;point;0.0;0.0;Neutralne_dla_modelu_v1;Pojedyncze wysokie obiekty, nie modelujemy zajętości terenu.
+ot_buzm_l;length_ot_buzm_l_m;Budowle ziemne;line;-0.6;0.7;Propozycja_ekspercka;Nasypy i wały mogą utrudniać przekraczanie terenu.
+ot_buzt_a;area_ot_buzt_a_m2;Zbiorniki techniczne;polygon;-0.85;0.7;Propozycja_ekspercka;Zbiorniki techniczne są przeszkodami powierzchniowymi.
+ot_buzt_p;count_ot_buzt_p;Zbiorniki techniczne;point;0.0;0.0;Neutralne_dla_modelu_v1;"Zbiorniki punktowe; nie utożsamiać liczby z powierzchnią przeszkód."
+ot_kuho_a;area_ot_kuho_a_m2;Kompleksy hotelowe;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kuhu_a;area_ot_kuhu_a_m2;Bazary i targowiska;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kuko_a;area_ot_kuko_a_m2;Kompleksy komunikacyjne;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Kompleks komunikacyjny może pokrywać się z siecią dróg.
+ot_kuko_p;count_ot_kuko_p;Kompleksy komunikacyjne;point;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kuos_a;area_ot_kuos_a_m2;Kompleksy oświatowe;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kuoz_a;area_ot_kuoz_a_m2;Kompleksy ochrony zdrowia;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kupg_a;area_ot_kupg_a_m2;Kompleksy przemysłowo-gospodarcze;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Kompleks przemysłowy może pokrywać się z budynkami.
+ot_kupg_p;count_ot_kupg_p;Kompleksy przemysłowo-gospodarcze;point;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kusc_a;area_ot_kusc_a_m2;Kompleksy sakralne i cmentarze;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kusk_a;area_ot_kusk_a_m2;Kompleksy sportowo-rekreacyjne;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_kuza_a;area_ot_kuza_a_m2;Kompleksy zabytkowo-historyczne;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oikm_a;area_ot_oikm_a_m2;Obiekty związane z komunikacją;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oikm_l;length_ot_oikm_l_m;Obiekty związane z komunikacją;line;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oikm_p;count_ot_oikm_p;Obiekty związane z komunikacją;point;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oimk_a;area_ot_oimk_a_m2;Mokradła;polygon;-0.9;1.4;Propozycja_ekspercka;Mokradła utrudniają przejazd cięższego pojazdu.
+ot_oior_a;area_ot_oior_a_m2;Obiekty orientacyjne;polygon;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oior_l;length_ot_oior_l_m;Obiekty orientacyjne;line;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oior_p;count_ot_oior_p;Obiekty orientacyjne;point;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oipr_l;length_ot_oipr_l_m;Obiekty przyrodnicze;line;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oipr_p;count_ot_oipr_p;Obiekty przyrodnicze;point;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_oisz_a;area_ot_oisz_a_m2;Szuwary;polygon;-0.8;0.8;Propozycja_ekspercka;Szuwary wskazują tereny uwilgotnione.
+ot_ptgn_a;area_ot_ptgn_a_m2;Grunty nieużytkowane;polygon;0.2;0.5;Propozycja_ekspercka;"Otwarte grunty; możliwość przejazdu zależy od podłoża."
+ot_ptkm_a;area_ot_ptkm_a_m2;Tereny komunikacyjne;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Teren komunikacyjny może pokrywać się z drogami i placami.
+ot_ptlz_a;area_ot_ptlz_a_m2;Lasy i zadrzewienia;polygon;-0.8;1.5;Pokonieczny_2018_Tabela_1;Zadrzewienia i lasy ograniczają ruch poza drogami.
+ot_ptnz_a;area_ot_ptnz_a_m2;Pozostałe tereny niezabudowane;polygon;0.15;0.5;Propozycja_ekspercka;Niezabudowane tereny potencjalnie łatwiejsze do przejazdu.
+ot_ptpl_a;area_ot_ptpl_a_m2;Place;polygon;0.45;0.7;Propozycja_ekspercka;Place często mają otwarte, przejezdne nawierzchnie.
+ot_ptrk_a;area_ot_ptrk_a_m2;Roślinność krzewiasta;polygon;-0.55;1.0;Propozycja_ekspercka;Roślinność krzewiasta utrudnia przejazd.
+ot_ptso_a;area_ot_ptso_a_m2;Składowiska odpadów;polygon;-0.7;0.7;Propozycja_ekspercka;Składowiska mogą być przeszkodą terenową.
+ot_pttr_a;area_ot_pttr_a_m2;Roślinność trawiasta i uprawy rolne;polygon;0.25;0.8;Propozycja_ekspercka;"Trawy i uprawy często są łatwiejsze do pokonania niż las; gleba nieznana."
+ot_ptut_a;area_ot_ptut_a_m2;Uprawy trwałe;polygon;-0.45;0.8;Propozycja_ekspercka;Sady i uprawy trwałe mają regularne przeszkody roślinne.
+ot_ptwp_a;area_ot_ptwp_a_m2;Wody powierzchniowe;polygon;-1.0;1.7;Pokonieczny_2018_Tabela_1;Woda powierzchniowa stanowi zasadniczą przeszkodę.
+ot_ptwz_a;area_ot_ptwz_a_m2;Wyrobiska i zwałowiska;polygon;-0.75;1.1;Propozycja_ekspercka;Wyrobiska i zwałowiska mają trudną rzeźbę i przeszkody.
+ot_ptzb_a;area_ot_ptzb_a_m2;Tereny zabudowane;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Zabudowa pokrycia terenu może pokrywać się z obrysami budynków.
+ot_skdr_l;length_ot_skdr_l_m;Drogi;line;0.7;1.7;Pokonieczny_2018_Tabela_1;"Drogi ułatwiają przejazd; długość jest przybliżeniem dostępności."
+ot_skjz_l;length_ot_skjz_l_m;Jezdnie;line;0.0;0.0;Neutralne_dla_modelu_v1;Jezdnie najczęściej dublują informację sieci drogowej SKDR_L.
+ot_skpp_l;length_ot_skpp_l_m;Przeprawy;line;0.0;0.0;Neutralne_dla_modelu_v1;"Przeprawy różnego rodzaju; bez podtypu nie oceniamy dostępności."
+ot_skrp_l;length_ot_skrp_l_m;Ciągi pieszo-rowerowe;line;0.0;0.0;Neutralne_dla_modelu_v1;Droga piesza lub rowerowa nie musi być przejezdna dla pojazdu wojskowego.
+ot_skrw_p;count_ot_skrw_p;Ronda i węzły drogowe;point;0.0;0.0;Neutralne_dla_modelu_v1;Punkt ronda/węzła już ujęty w sieci drogowej.
+ot_sktr_l;length_ot_sktr_l_m;Tory kolejowe i tramwajowe;line;-0.35;0.5;Propozycja_ekspercka;Infrastruktura kolejowa może utrudniać przekraczanie terenu.
+ot_suln_l;length_ot_suln_l_m;Linie elektroenergetyczne;line;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_supr_l;length_ot_supr_l_m;Przewody rurowe;line;0.0;0.0;Neutralne_dla_modelu_v1;"Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+ot_swkn_l;length_ot_swkn_l_m;Kanały;line;0.0;0.0;Neutralne_dla_modelu_v1;"Kanały mogą pokrywać się z poligonami wód PTWP_A; audit przed aktywacją."
+ot_swrm_l;length_ot_swrm_l_m;Rowy melioracyjne;line;-0.65;0.9;Propozycja_ekspercka;Rowy są liniową przeszkodą, często niewykazaną jako poligon wody.
+ot_swrs_l;length_ot_swrs_l_m;Rzeki i strumienie;line;0.0;0.0;Neutralne_dla_modelu_v1;"Rzeki/strumienie mogą pokrywać się z PTWP_A; audit przed aktywacją."
+ot_tcon_a;area_ot_tcon_a_m2;Obszary Natura 2000;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Ochrona prawna nie jest fizyczną przeszkodą.
+ot_tcrz_a;area_ot_tcrz_a_m2;Rezerwaty przyrody;polygon;0.0;0.0;Neutralne_dla_modelu_v1;Ochrona prawna nie jest fizyczną przeszkodą.

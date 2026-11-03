@@ -1,0 +1,647 @@
+{
+  "model": "IOP-BDOT10K-H3-v1",
+  "description": "Przejezdnosc pojazdu wojskowego drogami i poza nimi; wagi wstepne",
+  "article_url": "https://geografie.cz/media/pdf/geo_2018123030317.pdf",
+  "rows": [
+    {
+      "layer": "ot_adja_a",
+      "metric_column": "area_ot_adja_a_m2",
+      "name_pl": "Jednostki podziału administracyjnego",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Warstwa administracyjna: brak fizycznego wpływu."
+    },
+    {
+      "layer": "ot_adms_a",
+      "metric_column": "area_ot_adms_a_m2",
+      "name_pl": "Miejscowości",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Miejscowość jako jednostka przestrzenna; nie liczyć drugi raz zabudowy."
+    },
+    {
+      "layer": "ot_adms_p",
+      "metric_column": "count_ot_adms_p",
+      "name_pl": "Miejscowości",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Punkt opisowy miejscowości."
+    },
+    {
+      "layer": "ot_biub_l",
+      "metric_column": "length_ot_biub_l_m",
+      "name_pl": "Inne budowle (kod do sprawdzenia)",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Niejednoznaczny kod warstwy; nie przypisywać bariery bez sprawdzenia typu."
+    },
+    {
+      "layer": "ot_bubd_a",
+      "metric_column": "area_ot_bubd_a_m2",
+      "name_pl": "Budynki",
+      "geom_kind": "polygon",
+      "ivrf": -0.85,
+      "priority": 1.3,
+      "source": "Propozycja_ekspercka",
+      "reason": "Zajęcie powierzchni przez zabudowę utrudnia ruch poza drogami."
+    },
+    {
+      "layer": "ot_buhd_l",
+      "metric_column": "length_ot_buhd_l_m",
+      "name_pl": "Budowle hydrotechniczne",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa miesza konstrukcje wspierające i blokujące ruch."
+    },
+    {
+      "layer": "ot_buib_a",
+      "metric_column": "area_ot_buib_a_m2",
+      "name_pl": "Inne budowle",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Różne budowle; brak jednorodnej przejezdności."
+    },
+    {
+      "layer": "ot_buin_l",
+      "metric_column": "length_ot_buin_l_m",
+      "name_pl": "Budowle inżynierskie",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Mosty i inne budowle mogą ułatwiać lub utrudniać ruch."
+    },
+    {
+      "layer": "ot_buit_a",
+      "metric_column": "area_ot_buit_a_m2",
+      "name_pl": "Inne urządzenia techniczne",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Heterogeniczne obiekty urządzeń technicznych."
+    },
+    {
+      "layer": "ot_buit_p",
+      "metric_column": "count_ot_buit_p",
+      "name_pl": "Inne urządzenia techniczne",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Punktowe urządzenia bez informacji o zajmowanej powierzchni."
+    },
+    {
+      "layer": "ot_busp_a",
+      "metric_column": "area_ot_busp_a_m2",
+      "name_pl": "Obiekty sportowe",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Obiekty sportowe mają różne nawierzchnie."
+    },
+    {
+      "layer": "ot_busp_l",
+      "metric_column": "length_ot_busp_l_m",
+      "name_pl": "Obiekty sportowe",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Obiekty sportowe, niejednoznaczna bariera."
+    },
+    {
+      "layer": "ot_butr_l",
+      "metric_column": "length_ot_butr_l_m",
+      "name_pl": "Urządzenia transportowe",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Urządzenia transportowe, różny wpływ."
+    },
+    {
+      "layer": "ot_buuo_l",
+      "metric_column": "length_ot_buuo_l_m",
+      "name_pl": "Umocnienia drogowe i wodne",
+      "geom_kind": "line",
+      "ivrf": -0.4,
+      "priority": 0.5,
+      "source": "Propozycja_ekspercka",
+      "reason": "Umocnienia terenowe mogą stanowić przeszkody; wpływ zależy od typu."
+    },
+    {
+      "layer": "ot_buwt_p",
+      "metric_column": "count_ot_buwt_p",
+      "name_pl": "Wysokie budowle techniczne",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Pojedyncze wysokie obiekty, nie modelujemy zajętości terenu."
+    },
+    {
+      "layer": "ot_buzm_l",
+      "metric_column": "length_ot_buzm_l_m",
+      "name_pl": "Budowle ziemne",
+      "geom_kind": "line",
+      "ivrf": -0.6,
+      "priority": 0.7,
+      "source": "Propozycja_ekspercka",
+      "reason": "Nasypy i wały mogą utrudniać przekraczanie terenu."
+    },
+    {
+      "layer": "ot_buzt_a",
+      "metric_column": "area_ot_buzt_a_m2",
+      "name_pl": "Zbiorniki techniczne",
+      "geom_kind": "polygon",
+      "ivrf": -0.85,
+      "priority": 0.7,
+      "source": "Propozycja_ekspercka",
+      "reason": "Zbiorniki techniczne są przeszkodami powierzchniowymi."
+    },
+    {
+      "layer": "ot_buzt_p",
+      "metric_column": "count_ot_buzt_p",
+      "name_pl": "Zbiorniki techniczne",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Zbiorniki punktowe; nie utożsamiać liczby z powierzchnią przeszkód."
+    },
+    {
+      "layer": "ot_kuho_a",
+      "metric_column": "area_ot_kuho_a_m2",
+      "name_pl": "Kompleksy hotelowe",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kuhu_a",
+      "metric_column": "area_ot_kuhu_a_m2",
+      "name_pl": "Bazary i targowiska",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kuko_a",
+      "metric_column": "area_ot_kuko_a_m2",
+      "name_pl": "Kompleksy komunikacyjne",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Kompleks komunikacyjny może pokrywać się z siecią dróg."
+    },
+    {
+      "layer": "ot_kuko_p",
+      "metric_column": "count_ot_kuko_p",
+      "name_pl": "Kompleksy komunikacyjne",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kuos_a",
+      "metric_column": "area_ot_kuos_a_m2",
+      "name_pl": "Kompleksy oświatowe",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kuoz_a",
+      "metric_column": "area_ot_kuoz_a_m2",
+      "name_pl": "Kompleksy ochrony zdrowia",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kupg_a",
+      "metric_column": "area_ot_kupg_a_m2",
+      "name_pl": "Kompleksy przemysłowo-gospodarcze",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Kompleks przemysłowy może pokrywać się z budynkami."
+    },
+    {
+      "layer": "ot_kupg_p",
+      "metric_column": "count_ot_kupg_p",
+      "name_pl": "Kompleksy przemysłowo-gospodarcze",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kusc_a",
+      "metric_column": "area_ot_kusc_a_m2",
+      "name_pl": "Kompleksy sakralne i cmentarze",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kusk_a",
+      "metric_column": "area_ot_kusk_a_m2",
+      "name_pl": "Kompleksy sportowo-rekreacyjne",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_kuza_a",
+      "metric_column": "area_ot_kuza_a_m2",
+      "name_pl": "Kompleksy zabytkowo-historyczne",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oikm_a",
+      "metric_column": "area_ot_oikm_a_m2",
+      "name_pl": "Obiekty związane z komunikacją",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oikm_l",
+      "metric_column": "length_ot_oikm_l_m",
+      "name_pl": "Obiekty związane z komunikacją",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oikm_p",
+      "metric_column": "count_ot_oikm_p",
+      "name_pl": "Obiekty związane z komunikacją",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oimk_a",
+      "metric_column": "area_ot_oimk_a_m2",
+      "name_pl": "Mokradła",
+      "geom_kind": "polygon",
+      "ivrf": -0.9,
+      "priority": 1.4,
+      "source": "Propozycja_ekspercka",
+      "reason": "Mokradła utrudniają przejazd cięższego pojazdu."
+    },
+    {
+      "layer": "ot_oior_a",
+      "metric_column": "area_ot_oior_a_m2",
+      "name_pl": "Obiekty orientacyjne",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oior_l",
+      "metric_column": "length_ot_oior_l_m",
+      "name_pl": "Obiekty orientacyjne",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oior_p",
+      "metric_column": "count_ot_oior_p",
+      "name_pl": "Obiekty orientacyjne",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oipr_l",
+      "metric_column": "length_ot_oipr_l_m",
+      "name_pl": "Obiekty przyrodnicze",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oipr_p",
+      "metric_column": "count_ot_oipr_p",
+      "name_pl": "Obiekty przyrodnicze",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_oisz_a",
+      "metric_column": "area_ot_oisz_a_m2",
+      "name_pl": "Szuwary",
+      "geom_kind": "polygon",
+      "ivrf": -0.8,
+      "priority": 0.8,
+      "source": "Propozycja_ekspercka",
+      "reason": "Szuwary wskazują tereny uwilgotnione."
+    },
+    {
+      "layer": "ot_ptgn_a",
+      "metric_column": "area_ot_ptgn_a_m2",
+      "name_pl": "Grunty nieużytkowane",
+      "geom_kind": "polygon",
+      "ivrf": 0.2,
+      "priority": 0.5,
+      "source": "Propozycja_ekspercka",
+      "reason": "Otwarte grunty; możliwość przejazdu zależy od podłoża."
+    },
+    {
+      "layer": "ot_ptkm_a",
+      "metric_column": "area_ot_ptkm_a_m2",
+      "name_pl": "Tereny komunikacyjne",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Teren komunikacyjny może pokrywać się z drogami i placami."
+    },
+    {
+      "layer": "ot_ptlz_a",
+      "metric_column": "area_ot_ptlz_a_m2",
+      "name_pl": "Lasy i zadrzewienia",
+      "geom_kind": "polygon",
+      "ivrf": -0.8,
+      "priority": 1.5,
+      "source": "Pokonieczny_2018_Tabela_1",
+      "reason": "Zadrzewienia i lasy ograniczają ruch poza drogami."
+    },
+    {
+      "layer": "ot_ptnz_a",
+      "metric_column": "area_ot_ptnz_a_m2",
+      "name_pl": "Pozostałe tereny niezabudowane",
+      "geom_kind": "polygon",
+      "ivrf": 0.15,
+      "priority": 0.5,
+      "source": "Propozycja_ekspercka",
+      "reason": "Niezabudowane tereny potencjalnie łatwiejsze do przejazdu."
+    },
+    {
+      "layer": "ot_ptpl_a",
+      "metric_column": "area_ot_ptpl_a_m2",
+      "name_pl": "Place",
+      "geom_kind": "polygon",
+      "ivrf": 0.45,
+      "priority": 0.7,
+      "source": "Propozycja_ekspercka",
+      "reason": "Place często mają otwarte, przejezdne nawierzchnie."
+    },
+    {
+      "layer": "ot_ptrk_a",
+      "metric_column": "area_ot_ptrk_a_m2",
+      "name_pl": "Roślinność krzewiasta",
+      "geom_kind": "polygon",
+      "ivrf": -0.55,
+      "priority": 1.0,
+      "source": "Propozycja_ekspercka",
+      "reason": "Roślinność krzewiasta utrudnia przejazd."
+    },
+    {
+      "layer": "ot_ptso_a",
+      "metric_column": "area_ot_ptso_a_m2",
+      "name_pl": "Składowiska odpadów",
+      "geom_kind": "polygon",
+      "ivrf": -0.7,
+      "priority": 0.7,
+      "source": "Propozycja_ekspercka",
+      "reason": "Składowiska mogą być przeszkodą terenową."
+    },
+    {
+      "layer": "ot_pttr_a",
+      "metric_column": "area_ot_pttr_a_m2",
+      "name_pl": "Roślinność trawiasta i uprawy rolne",
+      "geom_kind": "polygon",
+      "ivrf": 0.25,
+      "priority": 0.8,
+      "source": "Propozycja_ekspercka",
+      "reason": "Trawy i uprawy często są łatwiejsze do pokonania niż las; gleba nieznana."
+    },
+    {
+      "layer": "ot_ptut_a",
+      "metric_column": "area_ot_ptut_a_m2",
+      "name_pl": "Uprawy trwałe",
+      "geom_kind": "polygon",
+      "ivrf": -0.45,
+      "priority": 0.8,
+      "source": "Propozycja_ekspercka",
+      "reason": "Sady i uprawy trwałe mają regularne przeszkody roślinne."
+    },
+    {
+      "layer": "ot_ptwp_a",
+      "metric_column": "area_ot_ptwp_a_m2",
+      "name_pl": "Wody powierzchniowe",
+      "geom_kind": "polygon",
+      "ivrf": -1.0,
+      "priority": 1.7,
+      "source": "Pokonieczny_2018_Tabela_1",
+      "reason": "Woda powierzchniowa stanowi zasadniczą przeszkodę."
+    },
+    {
+      "layer": "ot_ptwz_a",
+      "metric_column": "area_ot_ptwz_a_m2",
+      "name_pl": "Wyrobiska i zwałowiska",
+      "geom_kind": "polygon",
+      "ivrf": -0.75,
+      "priority": 1.1,
+      "source": "Propozycja_ekspercka",
+      "reason": "Wyrobiska i zwałowiska mają trudną rzeźbę i przeszkody."
+    },
+    {
+      "layer": "ot_ptzb_a",
+      "metric_column": "area_ot_ptzb_a_m2",
+      "name_pl": "Tereny zabudowane",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Zabudowa pokrycia terenu może pokrywać się z obrysami budynków."
+    },
+    {
+      "layer": "ot_skdr_l",
+      "metric_column": "length_ot_skdr_l_m",
+      "name_pl": "Drogi",
+      "geom_kind": "line",
+      "ivrf": 0.7,
+      "priority": 1.7,
+      "source": "Pokonieczny_2018_Tabela_1",
+      "reason": "Drogi ułatwiają przejazd; długość jest przybliżeniem dostępności."
+    },
+    {
+      "layer": "ot_skjz_l",
+      "metric_column": "length_ot_skjz_l_m",
+      "name_pl": "Jezdnie",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Jezdnie najczęściej dublują informację sieci drogowej SKDR_L."
+    },
+    {
+      "layer": "ot_skpp_l",
+      "metric_column": "length_ot_skpp_l_m",
+      "name_pl": "Przeprawy",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Przeprawy różnego rodzaju; bez podtypu nie oceniamy dostępności."
+    },
+    {
+      "layer": "ot_skrp_l",
+      "metric_column": "length_ot_skrp_l_m",
+      "name_pl": "Ciągi pieszo-rowerowe",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Droga piesza lub rowerowa nie musi być przejezdna dla pojazdu wojskowego."
+    },
+    {
+      "layer": "ot_skrw_p",
+      "metric_column": "count_ot_skrw_p",
+      "name_pl": "Ronda i węzły drogowe",
+      "geom_kind": "point",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Punkt ronda/węzła już ujęty w sieci drogowej."
+    },
+    {
+      "layer": "ot_sktr_l",
+      "metric_column": "length_ot_sktr_l_m",
+      "name_pl": "Tory kolejowe i tramwajowe",
+      "geom_kind": "line",
+      "ivrf": -0.35,
+      "priority": 0.5,
+      "source": "Propozycja_ekspercka",
+      "reason": "Infrastruktura kolejowa może utrudniać przekraczanie terenu."
+    },
+    {
+      "layer": "ot_suln_l",
+      "metric_column": "length_ot_suln_l_m",
+      "name_pl": "Linie elektroenergetyczne",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_supr_l",
+      "metric_column": "length_ot_supr_l_m",
+      "name_pl": "Przewody rurowe",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Klasa opisowa lub o niejednorodnym wpływie; wymaga analizy podtypów przed aktywacją."
+    },
+    {
+      "layer": "ot_swkn_l",
+      "metric_column": "length_ot_swkn_l_m",
+      "name_pl": "Kanały",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Kanały mogą pokrywać się z poligonami wód PTWP_A; audit przed aktywacją."
+    },
+    {
+      "layer": "ot_swrm_l",
+      "metric_column": "length_ot_swrm_l_m",
+      "name_pl": "Rowy melioracyjne",
+      "geom_kind": "line",
+      "ivrf": -0.65,
+      "priority": 0.9,
+      "source": "Propozycja_ekspercka",
+      "reason": "Rowy są liniową przeszkodą, często niewykazaną jako poligon wody."
+    },
+    {
+      "layer": "ot_swrs_l",
+      "metric_column": "length_ot_swrs_l_m",
+      "name_pl": "Rzeki i strumienie",
+      "geom_kind": "line",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Rzeki/strumienie mogą pokrywać się z PTWP_A; audit przed aktywacją."
+    },
+    {
+      "layer": "ot_tcon_a",
+      "metric_column": "area_ot_tcon_a_m2",
+      "name_pl": "Obszary Natura 2000",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Ochrona prawna nie jest fizyczną przeszkodą."
+    },
+    {
+      "layer": "ot_tcrz_a",
+      "metric_column": "area_ot_tcrz_a_m2",
+      "name_pl": "Rezerwaty przyrody",
+      "geom_kind": "polygon",
+      "ivrf": 0.0,
+      "priority": 0.0,
+      "source": "Neutralne_dla_modelu_v1",
+      "reason": "Ochrona prawna nie jest fizyczną przeszkodą."
+    }
+  ]
+}

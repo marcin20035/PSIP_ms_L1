@@ -1,0 +1,26 @@
+[
+  {
+    "resolution": "R7",
+    "classes": 64,
+    "active": 19,
+    "zero": 45,
+    "road_building_ratio": 4.851120857699805,
+    "built_cells": "281"
+  },
+  {
+    "resolution": "R8",
+    "classes": 64,
+    "active": 19,
+    "zero": 45,
+    "road_building_ratio": 6.712400000000001,
+    "built_cells": "1468"
+  },
+  {
+    "resolution": "R9",
+    "classes": 64,
+    "active": 19,
+    "zero": 45,
+    "road_building_ratio": 8.80539499036609,
+    "built_cells": "5909"
+  }
+]
